@@ -6,7 +6,7 @@ Implement test for `localhost:3001/users/food(s)`. See ./src/routes/users.js for
 **Minimum requirement:** create test cases for `GET`, `POST`
 
 **Bonus:** 
-  1. finish `DELETE` (see ./src/routes/users lines[10,12]) and implement `DELETE`
+  1. finish `DELETE` (see ./src/routes/users lines[10,12]) and implement `DELETE` test
 
 ### Exercise 2 
 For `GET localhost:3001/users/food`, sort the response.

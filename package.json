@@ -15,7 +15,6 @@
     "express-validator": "^5.3.1"
   },
   "devDependencies": {
-    "a": "^2.1.2",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
     "mocha": "^6.0.2",
