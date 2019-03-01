@@ -8,7 +8,10 @@ module.exports = app => {
 
   const router = express.Router();
   router.delete('/food', (req, res) => {
-    console.log(req.query)
+    console.log(req.query); 
+    res.send({
+      success: true
+    })
   });
   router.get('/foods', (req, res) => {
     res.send(usersCopy);
