@@ -1,7 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
+
+app.use(cors())
 
 const port = process.env.NODE_ENV === 'development' ? 3001 : 3010;
 
