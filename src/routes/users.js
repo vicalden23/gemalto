@@ -8,10 +8,22 @@ module.exports = app => {
 
   const router = express.Router();
   router.delete('/food', (req, res) => {
-    console.log(req.query); 
-    res.send({
-      success: true
-    })
+    console.log(req.query);
+    try {
+      let deletedFoods = []
+      usersCopy.forEach((item, i) => {
+        if (item.first_name === req.query.first_name && item.last_name === req.query.last_name) {
+          item.favorite_food = null
+          deletedFoods.push(item)
+        }
+      })
+      res.send({
+        success: true,
+        items: deletedFoods
+      })
+    } catch (err) {
+      res.status(422).send(err.toString())
+    }
   });
   router.get('/foods', (req, res) => {
     res.send(usersCopy);
