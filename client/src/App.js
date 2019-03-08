@@ -23,7 +23,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('/users/foods')
+    let url = process.env.NODE_ENV == 'production' ? 'https://gemalto-staging.herokuapp.com/' : 'http://localhost:3001/'
+    axios.get(`${url}/users/foods`)
       .then((response) => {
         this.setState({
           users: response.data
@@ -65,7 +66,8 @@ class App extends Component {
       favorite_food: this.state.favorite_food
     }
 
-    axios.post('/users/food', data)
+    let url = process.env.NODE_ENV == 'production' ? 'https://gemalto-staging.herokuapp.com/' : 'http://localhost:3001/'
+    axios.post(`${url}/users/food`, data)
       .then((response) => {
         console.log(response)
         this.state.users.unshift(data)
