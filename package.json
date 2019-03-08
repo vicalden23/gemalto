@@ -4,8 +4,9 @@
   "description": "```   npm install",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run dev\" \"npm run client\"",
+    "start": "concurrently \"npm run staging\" \"npm run client\"",
     "client": "cd client && npm start",
+    "staging": "NODE_ENV=staging node ./src/index.js",
     "dev": "NODE_ENV=development nodemon ./src/index.js",
     "test": "NODE_ENV=test mocha --exit"
   },
