@@ -20,7 +20,6 @@ describe('Server should be health', () => {
 describe('Users', () => {
   it('it should GET foods', done => {
     chai.request(server).get('/users/foods').end((err, res) => {
-      console.log(res.body)
       res.should.have.status(200)
       res.should.have.be.a('object')
       res.body[0].should.have.property('id')
