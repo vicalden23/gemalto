@@ -23,7 +23,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:3001/users/foods')
+    axios.get('/users/foods')
       .then((response) => {
         this.setState({
           users: response.data
@@ -65,7 +65,7 @@ class App extends Component {
       favorite_food: this.state.favorite_food
     }
 
-    axios.post('http://localhost:3001/users/food', data)
+    axios.post('/users/food', data)
       .then((response) => {
         console.log(response)
         this.state.users.unshift(data)
