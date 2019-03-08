@@ -7,7 +7,7 @@ To install dependencies (client and server):
 ```
 To start development servers:
 ```
-  npm run dev
+  npm run start:dev
 
   npm run test
 ```
